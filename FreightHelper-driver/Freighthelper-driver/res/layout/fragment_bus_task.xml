@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/task_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/task_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/layout_title_height"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/task_range"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="right|center_vertical"
+                android:text=""
+                android:textColor="@color/text_highlight_color" />
+            
+            <ImageView
+                android:id="@+id/task_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%h"
+                app:layout_paddingTopPercent="38%h"
+                app:layout_paddingBottomPercent="38%h"
+                android:layout_centerVertical="true"
+                app:layout_marginLeftPercent="1%sw"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_drop_down"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/task_starttime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text="至"
+                android:textColor="@color/text_highlight_color" />
+
+            <TextView
+                android:id="@+id/task_endtime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/main_color" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_marginTopPercent="@string/common_marginTopPercent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="15%sh"
+                android:orientation="horizontal" >
+
+                <!-- 全部 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/task_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_gray"
+                    app:bc_num=""
+                    app:bc_title="@string/business_task_all" />
+
+                <!-- 正常发车 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/task_normal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_blue"
+                    app:bc_num=""
+                    app:bc_title="@string/business_task_normal" />
+
+                <!-- 晚点发车 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/task_late"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_purple"
+                    app:bc_num=""
+                    app:bc_title="@string/business_task_late" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="15%sh"
+                android:orientation="horizontal" >
+
+                <!-- 等待发车 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/task_wait"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_lightgreen"
+                    app:bc_num=""
+                    app:bc_title="@string/business_task_wait" />
+
+                <!-- 预计延误 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/task_delay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_orangered"
+                    app:bc_num=""
+                    app:bc_title="@string/business_task_delay" />
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:bc_bg="@drawable/shape_circle_gray"
+                    app:bc_num=""
+                    app:bc_title="" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_marginTopPercent="5%h"
+                android:background="@color/windows_color" >
+
+                <!-- 饼状统计图 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.LinePieView
+                    android:id="@+id/task_pieview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:centerTextColor="@color/main_color"
+                    app:centerTextSize="24sp"
+                    app:circleWidth="40dp"
+                    app:dataTextColor="@color/black"
+                    app:dataTextSize="16sp" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    
+    <!-- 网络异常 -->
+
+    <include
+        android:id="@+id/task_net_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_net_abnormal"
+        android:visibility="gone" />
+
+    <!-- 正在加载 -->
+
+    <include
+        android:id="@+id/task_laoding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading" />
+
+</com.zhy.android.percent.support.PercentFrameLayout>

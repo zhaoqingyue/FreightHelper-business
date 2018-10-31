@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/mydriver_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title_with_pull" />
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windows_color" >
+
+        <!-- 暂无司机 -->
+
+        <TextView
+            android:id="@+id/mydriver_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_textSizePercent="@string/textsize_50px"
+            android:gravity="center"
+            android:text="@string/mydriver_empty"
+            android:textColor="@color/text_highlight_color"
+            android:visibility="gone" />
+
+        <!-- 加载失败 -->
+
+        <include
+            android:id="@+id/mydriver_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_failed"
+            android:visibility="gone" />
+
+        <!-- 网络异常 -->
+
+        <include
+            android:id="@+id/mydriver_net_abnormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_net_abnormal"
+            android:visibility="gone" />
+
+        <!-- 正在加载 -->
+
+        <include
+            android:id="@+id/mydriver_laoding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_loading" />
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/mydriver_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 搜索框 -->
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/mydriver_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="8%"
+                app:layout_marginBottomPercent="2%"
+                app:layout_marginLeftPercent="3%"
+                app:layout_marginRightPercent="3%"
+                app:layout_marginTopPercent="2%"
+                android:background="@drawable/shape_clear_edittext_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="40%h"
+                    app:layout_marginLeftPercent="5%"
+                    app:layout_marginRightPercent="5%"
+                    app:layout_widthPercent="40%h"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_edit_search" />
+
+                <com.mtq.bus.freighthelper.ui.customview.ClearEditText
+                    android:id="@+id/mydriver_clear_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_paddingRightPercent="5%"
+                    app:layout_textSizePercent="@string/textsize_48px"
+                    android:background="@color/white"
+                    android:hint="@string/saerch_driver_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_clear_color"
+                    android:textColorHint="@color/edit_clear_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <!-- 车辆列表 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.ListViewForRefresh
+                android:id="@+id/mydriver_listview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarSize="@dimen/scrollbarSize"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

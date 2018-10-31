@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/waybill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/waybill_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/layout_title_height"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/waybill_range"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="right|center_vertical"
+                android:text=""
+                android:textColor="@color/text_highlight_color" />
+            
+            <ImageView
+                android:id="@+id/waybill_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%h"
+                app:layout_paddingTopPercent="38%h"
+                app:layout_paddingBottomPercent="38%h"
+                android:layout_centerVertical="true"
+                app:layout_marginLeftPercent="1%sw"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_drop_down"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/waybill_starttime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text="至"
+                android:textColor="@color/text_highlight_color" />
+
+            <TextView
+                android:id="@+id/waybill_endtime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/main_color" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_marginTopPercent="@string/common_marginTopPercent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="15%sh"
+                android:orientation="horizontal" >
+
+                <!-- 全部运单 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_gray"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_all" />
+
+                <!-- 待调度 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_unschedule"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_purple"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_unschedule" />
+
+                <!-- 待运输 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_untransport"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_blue"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_untransport" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="15%sh"
+                android:orientation="horizontal" >
+
+                <!-- 运输中 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_transporting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_green"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_transporting" />
+
+                <!-- 已签收 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_signup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_lightgreen"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_signup" />
+
+                <!-- 异常单 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.BoxCard
+                    android:id="@+id/waybill_abnormal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:bc_bg="@drawable/shape_circle_orangered"
+                    app:bc_num="0"
+                    app:bc_title="@string/business_waybill_abnormal" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_marginTopPercent="5%h"
+                android:background="@color/windows_color" >
+
+                <!-- 饼状统计图 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.LinePieView
+                    android:id="@+id/waybill_pieview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:centerTextColor="@color/main_color"
+                    app:centerTextSize="24sp"
+                    app:circleWidth="40dp"
+                    app:dataTextColor="@color/black"
+                    app:dataTextSize="16sp" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <!-- 网络异常 -->
+
+    <include
+        android:id="@+id/waybill_net_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_net_abnormal"
+        android:visibility="gone" />
+
+    <!-- 正在加载 -->
+
+    <include
+        android:id="@+id/waybill_laoding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading" />
+
+</com.zhy.android.percent.support.PercentFrameLayout>

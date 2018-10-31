@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_list_item_bg"
+        android:orientation="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_item_heightPercent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/item_mycar_license_img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                app:layout_heightPercent="36%h"
+                app:layout_widthPercent="36%h"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/me_mycar" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/item_mycar_license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+
+                <TextView
+                    android:id="@+id/item_mycar_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_normal_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/item_mycar_license"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/windows_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_item_heightPercent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/item_mycar_avatar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentLeft="true"
+                app:layout_heightPercent="36%h"
+                app:layout_widthPercent="36%h"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/me_user" />
+
+            <TextView
+                android:id="@+id/item_mycar_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/item_mycar_avatar"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:text=""
+                android:textColor="@color/text_highlight_color" />
+
+            <TextView
+                android:id="@+id/item_mycar_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:text=""
+                android:textColor="@color/mobile_color" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="@string/common_marginTopPercent"
+        android:background="@color/windows_color" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

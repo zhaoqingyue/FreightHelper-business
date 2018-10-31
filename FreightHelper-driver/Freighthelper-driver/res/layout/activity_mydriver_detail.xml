@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windows_color" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/windows_color"
+            android:scrollbarSize="@dimen/scrollbarSize"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbars="vertical" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/mydriver_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 基本信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mydriver_detail_baseinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mydriver_base_info" />
+
+                <!-- 司机姓名 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mydriver_name" />
+
+                <!-- 联系电话 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_ismobile="true"
+                    app:vc_title="@string/mydriver_mobile" />
+
+                <!-- 邀请状态 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_title="@string/mydriver_status" />
+
+                <!-- 证件信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mycar_detail_driver_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mydriver_identity_info" />
+
+                <!-- 省份证号码 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_identity_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_title="@string/mydriver_identity_num" />
+
+                <!-- 紧急联系人 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mydriver_detail_emergency_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mydriver_emergency_contact" />
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_emergency_contact0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_ismobile="true"
+                    app:vc_title="" />
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mydriver_detail_emergency_contact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_ismobile="true"
+                    app:vc_title="" />
+
+                <!-- 邀请 -->
+
+                <Button
+                    android:id="@+id/mydriver_detail_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_heightPercent="@string/common_btn_heightPercent"
+                    app:layout_marginTopPercent="@string/common_marginTopPercent"
+                    app:layout_textSizePercent="@string/textsize_btn"
+                    android:background="@drawable/selector_bth_white_bg"
+                    android:text="@string/mydriver_invite"
+                    android:textColor="@color/main_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </ScrollView>
+        
+        <!-- 加载失败 -->
+
+        <include
+            android:id="@+id/mydriver_detail_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_failed"
+            android:visibility="gone" />
+
+        <!-- 网络异常 -->
+
+        <include
+            android:id="@+id/mydriver_detail_net_abnormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_net_abnormal"
+            android:visibility="gone" />
+
+        <!-- 正在加载 -->
+
+        <include
+            android:id="@+id/mydriver_detail_laoding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_loading" />
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

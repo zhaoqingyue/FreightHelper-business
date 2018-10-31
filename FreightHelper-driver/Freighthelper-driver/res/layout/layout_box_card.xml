@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/box_card_num"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="36%w"
+        app:layout_textSizePercent="4.5%sw"
+        app:layout_widthPercent="36%w"
+        android:background="@drawable/shape_circle_gray"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/box_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:layout_textSizePercent="@string/textsize_40px"
+        android:text=""
+        android:textColor="@color/text_highlight_color" />
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/vertical_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+        app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+        android:background="@drawable/selector_bth_white_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/vertical_card_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            app:layout_heightPercent="36%h"
+            app:layout_marginRightPercent="4%sw"
+            app:layout_widthPercent="36%h"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/vertical_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:layout_textSizePercent="@string/textsize_46px"
+            android:text=""
+            android:textColor="@color/text_highlight_color" />
+        
+        <ImageView
+            android:id="@+id/vertical_card_star"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            app:layout_heightPercent="16%h"
+            app:layout_marginLeftPercent="2%sw"
+            app:layout_widthPercent="16%h"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_star"
+            android:visibility="gone" />
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/vertical_card_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/vertical_card_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:ellipsize="end"
+                android:gravity="right|center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_normal_color"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/vertical_card_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%h"
+                app:layout_paddingTopPercent="38%h"
+                app:layout_paddingBottomPercent="38%h"
+                android:layout_centerVertical="true"
+                app:layout_marginLeftPercent="2%sw"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_right"
+                android:visibility="gone" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/vertical_card_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/windows_color" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

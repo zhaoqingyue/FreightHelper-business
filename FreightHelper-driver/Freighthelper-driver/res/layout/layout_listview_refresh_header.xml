@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="9%sh"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.zhy.android.percent.support.PercentFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/iv_listview_header_down_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/listview_headview_red_arrow" />
+
+            <ProgressBar
+                android:id="@+id/pb_listview_header_progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                app:layout_heightPercent="50%h"
+                app:layout_widthPercent="50%h"
+                android:indeterminateDrawable="@drawable/rotate_progress_animation"
+                android:indeterminateDuration="1000"
+                android:visibility="gone" />
+        </com.zhy.android.percent.support.PercentFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_listview_header_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="5%sw"
+            app:layout_textSizePercent="@string/textsize_46px"
+            android:text="下拉刷新"
+            android:textColor="@color/text_highlight_color" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

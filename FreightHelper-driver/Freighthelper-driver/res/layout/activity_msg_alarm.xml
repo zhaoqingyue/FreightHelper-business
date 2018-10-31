@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="32%h" >
+
+        <!-- 地图 -->
+
+        <FrameLayout
+            android:id="@+id/msg_alarm_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/msg_alarm_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="56%w"
+            app:layout_marginTopPercent="33%h"
+            app:layout_textSizePercent="@string/textsize_90px"
+            android:text=""
+            android:textColor="@color/text_highlight_color"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <ScrollView
+        android:id="@+id/car_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:scrollbarSize="@dimen/scrollbarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbars="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 报警车辆 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_license"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_alignRight="false"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_title="@string/msg_alarm_license" />
+
+            <!-- 报警位置 -->
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:text="@string/msg_alarm_pos"
+                    android:textColor="@color/text_highlight_color" />
+
+                <TextView
+                    android:id="@+id/msg_alarm_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text=""
+                    android:textColor="@color/text_normal_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/vertical_card_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/windows_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <!-- 报警时间 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_alignRight="false"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_title="@string/msg_alarm_time" />
+
+            <!-- 警情名称 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_type"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_alignRight="false"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_title="@string/msg_alarm_type" />
+
+            <!-- 警情描述 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_alignRight="false"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_hasline="false"
+                app:vc_title="@string/msg_alarm_content" />
+
+            <!-- 司机名片 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_ddt_heightPercent"
+                app:ddt_dropable="false"
+                app:ddt_title="@string/msg_alarm_driver" />
+
+            <!-- 主司机 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_mdriver"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_icon="@drawable/icon_driver"
+                app:vc_ismobile="true"
+                app:vc_title="" />
+
+            <!-- 副司机 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/msg_alarm_sdriver"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_hasline="false"
+                app:vc_icon="@drawable/icon_driver"
+                app:vc_ismobile="true"
+                app:vc_title="" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:orientation="vertical" >
+
+        <!-- 车辆 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/schedule_license"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_content="粤B66666"
+            app:vc_hasarrow="false"
+            app:vc_hascontent="true"
+            app:vc_title="@string/schedule_license" />
+
+        <!-- 调度司机 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/schedule_driver"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_content="请选择司机"
+            app:vc_hascontent="true"
+            app:vc_title="@string/schedule_driver" />
+
+        <!-- 调度方式 -->
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center_vertical"
+                android:text="@string/schedule_mode"
+                android:textColor="@color/text_highlight_color" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- 文字 -->
+
+                <TextView
+                    android:id="@+id/schedule_mode_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="67%h"
+                    app:layout_textSizePercent="@string/textsize_40px"
+                    app:layout_widthPercent="21.6%sw"
+                    android:background="@drawable/selector_bookmark_bg"
+                    android:gravity="center"
+                    android:text="@string/schedule_mode_text"
+                    android:textColor="@drawable/selector_bookmark_text" />
+
+                <!-- 语音 -->
+
+                <TextView
+                    android:id="@+id/schedule_mode_voice"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="67%h"
+                    app:layout_textSizePercent="@string/textsize_40px"
+                    app:layout_widthPercent="21.6%sw"
+                    android:background="@drawable/selector_bookmark_bg"
+                    android:gravity="center"
+                    android:text="@string/schedule_mode_voice"
+                    android:textColor="@drawable/selector_bookmark_text" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!-- 位置 -->
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="center_vertical"
+                android:text="@string/schedule_pos"
+                android:textColor="@color/text_highlight_color" />
+
+            <!-- 选择后的位置 -->
+
+            <TextView
+                android:id="@+id/schedule_map_poi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layout_marginLeftPercent="3%sw"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="请选择调度位置"
+                android:textColor="@color/text_normal_color" />
+
+            <!-- 地图选点 -->
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/schedule_map_select_point_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_marginLeftPercent="2%sw"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_poi" />
+
+                <TextView
+                    android:id="@+id/schedule_map_select_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="1%sw"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:gravity="center_vertical"
+                    android:text="@string/schedule_map_select_point"
+                    android:textColor="@color/main_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.mtq.bus.freighthelper.ui.customview.DropDownText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_ddt_heightPercent"
+            app:ddt_dropable="false"
+            app:ddt_title="@string/schedule_msg" />
+
+        <!-- 消息内容 -->
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="20%h"
+            app:layout_paddingBottomPercent="@string/common_marginTopPercent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            app:layout_paddingTopPercent="@string/common_marginTopPercent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <!-- 发送类型为语音 -->
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/ll_scedule_voice_play_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_voice_heightPercent" >
+
+                    <ImageView
+                        android:id="@+id/schedule_send_voice_bg"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"
+                        app:layout_auto_basewidth="height"
+                        app:layout_heightPercent="300%h"
+                        app:layout_widthPercent="400%h"
+                        android:background="@drawable/dialog_send_voice_bg" />
+
+                    <ImageView
+                        android:id="@+id/schedule_send_voice_anim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:layout_paddingLeftPercent="@string/scedule_voice_paddingLeftPercent"
+                        app:layout_paddingRightPercent="@string/common_paddingLeftPercent"
+                        android:src="@drawable/dialog_send_voice_anim" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <TextView
+                    android:id="@+id/schedule_sendvoice_text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_paddingLeftPercent="@string/scedule_voice_paddingLeftPercent"
+                    app:layout_paddingTopPercent="@string/common_voice_paddingTopPercent"
+                    app:layout_textSizePercent="@string/textsize_36px"
+                    android:text="@string/dialog_audio_recoder_time"
+                    android:textColor="@color/dialog_sendvoice_text_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <!-- 发送类型为文本 -->
+
+            <EditText
+                android:id="@+id/schedule_msg_edit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:background="@color/white"
+                android:gravity="top|left"
+                android:hint="@string/schedule_msg_hint"
+                android:textColor="@color/text_highlight_color"
+                android:textColorHint="@color/text_normal_color"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/schedule_msg_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:gravity="right"
+                android:text="@string/schedule_msg_count"
+                android:textColor="@color/text_normal_color"
+                android:visibility="gone" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 发送调度 -->
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/schedule_send"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+               	android:clickable="false"
+                android:layout_alignParentBottom="true"
+                app:layout_heightPercent="@string/common_btn_heightPercent"
+                android:background="@drawable/selector_bth_white_bg"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    app:layout_heightPercent="40%h"
+                    app:layout_widthPercent="40%h"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_car_schedule" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="3%sw"
+                    app:layout_textSizePercent="@string/textsize_50px"
+                    android:gravity="center_vertical"
+                    android:text="@string/schedule_send"
+                    android:textColor="@color/main_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

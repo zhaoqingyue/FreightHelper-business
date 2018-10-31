@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        android:background="@color/bar_bg_color" >
+
+        <TextView
+            android:id="@+id/msg_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_textSizePercent="@string/textsize_42px"
+            android:gravity="center_vertical"
+            android:text="全部已读"
+            android:textColor="@color/text_highlight_color" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <!-- 警情消息 -->
+
+            <TextView
+                android:id="@+id/msg_alarm"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                app:layout_heightPercent="70%h"
+                app:layout_textSizePercent="@string/textsize_44px"
+                app:layout_widthPercent="22.6%sw"
+                android:background="@drawable/selector_bookmark_bg"
+                android:gravity="center"
+                android:text="@string/msg_alarm"
+                android:textColor="@drawable/selector_bookmark_text" />
+
+            <!-- 系统消息 -->
+
+            <TextView
+                android:id="@+id/msg_sys"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/msg_alarm"
+                app:layout_heightPercent="70%h"
+                app:layout_textSizePercent="@string/textsize_44px"
+                app:layout_widthPercent="22.6%sw"
+                android:background="@drawable/selector_bookmark_bg"
+                android:gravity="center"
+                android:text="@string/msg_sys"
+                android:textColor="@drawable/selector_bookmark_text" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.mtq.bus.freighthelper.ui.customview.NoScrollViewPager
+        android:id="@+id/msg_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

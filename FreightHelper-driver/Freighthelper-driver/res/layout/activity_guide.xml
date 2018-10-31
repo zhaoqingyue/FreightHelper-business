@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/guide_jump0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        app:layout_heightPercent="12%w"
+        app:layout_marginRightPercent="3%w"
+        app:layout_marginTopPercent="3%w"
+        app:layout_paddingBottomPercent="3%w"
+        app:layout_paddingLeftPercent="3%w"
+        app:layout_paddingRightPercent="3%w"
+        app:layout_paddingTopPercent="3%w"
+        app:layout_widthPercent="18%w"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_guide_jump"
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/guide_jump"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        app:layout_heightPercent="12%w"
+        app:layout_marginRightPercent="3%w"
+        app:layout_marginTopPercent="3%w"
+        app:layout_paddingBottomPercent="3%w"
+        app:layout_paddingLeftPercent="3%w"
+        app:layout_paddingRightPercent="3%w"
+        app:layout_paddingTopPercent="3%w"
+        app:layout_widthPercent="18%w"
+        android:text="跳过"
+        android:textColor="#999999"
+        app:layout_textSizePercent="@string/textsize_48px" />
+
+    <LinearLayout
+        android:id="@+id/guide_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_dot_bg" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_dot_bg" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_dot_bg" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_dot_bg" />
+    </LinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

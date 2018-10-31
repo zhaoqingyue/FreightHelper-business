@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">货运宝</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- 引导 -->
+    <string name="guide_enter">开始体验</string>
+    
+    <!-- 登录 -->
+    <string name="login_account_hint">请输入用户名</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="login_login">登录</string>
+    <string name="login_lost_pwd">忘记密码</string>
+    
+    <!-- 主页面 -->
+    <string name="main_bottom_msg">消息</string>
+    <string name="main_bottom_car">车辆监控</string>
+    <string name="main_bottom_me">我的</string>
+    
+    <!-- 消息中心 -->
+    <string name="msg_alarm">警情消息</string>
+    <string name="msg_sys">系统消息</string>
+    <string name="msg_alarm_car">车况</string>
+    <string name="msg_alarm_device">设备</string>
+    <string name="msg_alarm_behavior">驾驶行为</string>
+    
+    <string name="msg_alarm_detail">报警详情</string>
+    <string name="msg_sys_detail">消息详情</string>
+    <string name="msg_alarm_license">报警车辆：&#160;</string>
+    <string name="msg_alarm_pos">报警位置：&#160;</string>
+    <string name="msg_alarm_time">报警时间：&#160;</string>
+    <string name="msg_alarm_type">警情名称：&#160;</string>
+    <string name="msg_alarm_content">警情描述：&#160;</string>
+    <string name="msg_alarm_driver">司机信息</string>
+    
+    <string name="msg_no_msg">当前暂无消息</string>
+    
+    <!-- 车辆监控 -->
+    <string name="car_schedule">发送调度消息</string>
+    <string name="car_track">轨迹回放</string>
+    <string name="car_driver_list">司机列表</string>
+    
+    <string name="car_all_group">全部车队</string>
+    <string name="car_online">在线车辆：</string>
+    <string name="car_online_unit">辆</string>
+    <string name="car_mileage">日总里程：</string>
+    <string name="car_mileage_unit">公里</string>
+    <string name="car_type_work">作业中</string>
+    <string name="car_type_has_sent">已派车</string>
+    <string name="car_type_idle">空闲</string>
+    <string name="car_type_maintenance">维修保养</string>
+    <string name="car_list_count">车辆：%d辆</string>
+    
+    <string name="car_detail_mileage">今日行驶%d公里</string>
+    <string name="car_detail_task_detail">车辆实时数据</string>
+    <string name="car_detail_task_store">当日运单数据</string>
+    <string name="car_detail_temperature">车厢温度</string>
+    <string name="car_detail_task_navi">当日点火熄火数据</string>
+    <string name="car_detail_schedule">车辆调度</string>
+    <string name="car_detail_track">轨迹回放</string>
+  
+    <string name="car_task_mileage">总里程：&#160;</string>
+    <string name="car_task_traveltime">总时长：&#160;</string>
+    
+    <string name="car_state_remain_fuel">剩余油量</string>
+    <string name="car_state_battery_voltage">电瓶电压</string>
+    <string name="car_state_engine_speed">发动机转速</string>
+    <string name="car_state_car_speed">车速</string>
+    <string name="car_state_coolant_temperature">冷却液温度</string>
+    <string name="car_state_moment_fuel">瞬时油耗</string>
+    <string name="car_state_empty">暂无车辆</string>
+    
+    <!-- 车辆调度 -->
+    <string name="schedule_license">车辆</string>
+    <string name="schedule_driver">调度司机</string>
+    <string name="schedule_mode">调度方式</string>
+    <string name="schedule_mode_text">文字</string>
+    <string name="schedule_mode_voice">语音</string>
+    <string name="schedule_pos">位置</string>
+    <string name="schedule_map_select_point">地图选点</string>
+    <string name="schedule_msg">消息内容</string>
+    <string name="schedule_msg_hint">请输入调度消息内容</string>
+    <string name="schedule_msg_count">%d/100</string>
+    <string name="schedule_send">发送调度</string>
+    <string name="dialog_sendvoice_please_voice">请录入语音!</string>
+    <string name="please_selector_driver">请选择一个司机</string>
+    
+    <!--  车辆调度中发送语音dialog -->
+    <string name="dialog_sendvoice_btn_text_submit">提交</string>
+    <string name="dialog_audio_recoder_time">00"</string>
+    <string name="dialog_sendvoice_press_audio">按住说话</string>
+    <string name="dialog_sendvoice_release_save">松开保存</string>
+    <string name="dialog_schedule_send_success_text">调度发送成功!</string>
+    <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
+    <string name="error_state_record">正在录音中，请先停止录音</string>
+    <string name="error_unknown">无法识别的错误</string>
+    <string name="dialog_schedule_send_failed_text">您的调度发送失败,\n请重新发送!</string>
+    <string name="send_scedule_msg">发送中,请稍等...</string>
+    <string name="cannot_edit_emoj">不支持输入表情包!</string>
+    
+   
+     
+    <!-- 轨迹回放 -->
+    <string name="track_time_title">轨迹时间：&#160;</string>
+    <string name="track_time_yesterday">前一天</string>
+    <string name="track_time_custom">自定义</string>
+    <string name="track_time_to">至</string>
+    <string name="track_speed">速率：&#160;</string>
+    <string name="track_speed_one">1倍速</string>
+    <string name="track_speed_two">2倍速</string>
+    <string name="track_speed_three">3倍速</string>
+    <string name="track_speed_four">4倍速</string>
+    <string name="track_play">播放</string>
+    <string name="track_pause">暂停</string>
+    
+    
+    <!-- 我的 -->
+    <string name="me_userinfo">我的信息</string>
+    <string name="me_bus">业务看板</string>
+    <string name="me_car">我的车辆</string>
+    <string name="me_driver">我的司机</string>
+    <string name="me_feedback">反馈</string>
+    <string name="me_about">关于我们</string>
+    
+    <!-- 我的信息 -->
+    <string name="userinfo_username">用户名</string>
+    <string name="userinfo_org_name">所属机构</string>
+    <string name="userinfo_name">姓名</string>
+    <string name="userinfo_pwd">修改密码</string>
+    <string name="userinfo_logout">退出登录</string>
+    
+    <!-- 业务看板 -->
+    <string name="business_waybill">运单</string>
+    <string name="business_task">运输计划</string>
+    <string name="business_waybill_all">全部运单</string>
+    <string name="business_waybill_unschedule">待调度</string>
+    <string name="business_waybill_untransport">待运输</string>
+    <string name="business_waybill_transporting">运输中</string>
+    <string name="business_waybill_signup">已签收</string>
+    <string name="business_waybill_abnormal">异常单</string>
+    <string name="business_task_all">全部</string>
+    <string name="business_task_normal">正常发车</string>
+    <string name="business_task_late">晚点发车</string>
+    <string name="business_task_wait">等待发车</string>
+    <string name="business_task_delay">预计延误</string>
+    
+    <!-- 选择时间 -->
+    <string name="select_time">选择时间</string>
+    <string name="select_time_start">开始时间：&#160;</string>
+    <string name="select_time_end">结束时间：&#160;</string>
+    <string name="select_time_sure">确定</string>
+    <string name="select_time_cancel">取消</string>
+    <string name="select_time_start_time">选择开始时间</string>
+    <string name="select_time_end_time">选择结束时间</string>
+    <string name="select_time_max_day">*最多只能选择5天的日期</string>
+    
+    
+    <!-- 车辆信息 -->
+    <string name="mycar_detail">查看车辆</string>
+    <string name="mycar_base_info">基本信息</string>
+    <string name="mycar_license">车牌</string>
+    <string name="mycar_source">车辆属性</string>
+    <string name="mycar_group">所属车队</string>
+    <string name="mycar_driver_info">司机信息</string>
+    <string name="mycar_format_info">车辆规格信息</string>
+    <string name="mycar_carmodel">车辆类型</string>
+    <string name="mycar_cartype">车型分类</string>
+    <string name="mycar_device_info">车辆设备信息</string>
+    <string name="mycar_device_type">设备类型</string>
+    <string name="mycar_device_model">设备型号</string>
+    <string name="mycar_device_terminal">设备终端号</string>
+    <string name="mycar_device_sim">SIM卡号</string>
+    <string name="mycar_empty">暂无车辆</string>
+    <string name="mycar_source_self">自有车辆</string>
+    <string name="mycar_source_society">社会车辆</string>
+    
+    <!-- 司机信息 -->
+    <string name="mydriver_telephone">电话</string>
+    <string name="mydriver_detail">查看司机</string>
+    <string name="mydriver_base_info">基本信息</string>
+    <string name="mydriver_name">司机姓名</string>
+    <string name="mydriver_mobile">联系电话</string>
+    <string name="mydriver_status">邀请状态</string>
+    <string name="mydriver_identity_info">证件信息</string>
+    <string name="mydriver_identity_num">身份证号码</string>
+    <string name="mydriver_emergency_contact">紧急联系人</string>
+    <string name="mydriver_invite">发送邀请</string>
+    <string name="mydriver_empty">暂无司机</string>
+    
+    <!-- 反馈 -->
+    <string name="feedback_type">反馈类型</string>
+    <string name="feedback_device_type">设备类型</string>
+    <string name="feedback_title">标题</string>
+    <string name="feedback_content">消息内容</string>
+    <string name="feedback_content_hint">请您填写10个字以上的问题描述以便我们提供更好的帮助</string>
+    <string name="feedback_pic">图片(选填)</string>
+    <string name="feedback_pic_hint">请您上传图片</string>
+    <string name="feedback_mobile">联系电话(选填)</string>
+    <string name="feedback_mobile_hint">请您填写手机号码，以便我们与您联系</string>
+    <string name="hardware_divace">硬件类</string>
+    <string name="platform_divace">平台类</string>
+    <!-- 关于 -->
+    <string name="about_update">检查更新</string>
+    <string name="about_legal_notice">法律声明</string>
+    <string name="about_user_agreement">用户服务协议</string>
+    <string name="about_license_agreement">软件使用许可协议</string>
+    <string name="about_customer_service">客服电话</string>
+    
+    <string name="about_update_latest">已是最新版本</string>
+    <string name="about_update_has_new_version">发现新版本</string>
+    
+    <string name="saerch_hint">搜索</string>
+    <string name="saerch_driver_hint">请输入司机姓名</string>
+    <string name="saerch_mycar_hint">请输入车牌号码</string>
+    
+    <string name="btn_save">保存</string>
+    <string name="btn_submit">提交</string>
+    
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_confirm">确认</string>
+    <string name="dialog_sure">确定</string>
+    <string name="dialog_know">知道了</string>
+    <string name="dialog_call">确认要拨打电话</string>
+    <string name="dialog_exit">确定要退出？</string>
+    <string name="dialog_contact_administrator">请您联系企业管理员!</string>
+    <string name="dialog_new_version">有最新版本现在更新？</string>
+    <string name="dialog_lastest_version">最新版本: %s</string>
+    <string name="dialog_no_need">以后再说</string>
+    <string name="dialog_update_now">立即更新</string>
+    <string name="dialog_invite">是否邀请【%s】加入企业？</string>
+    
+    <string name="dialog_feedback_success">您的反馈已提交成功，我们的工作人员会尽快与您联系!谢谢!</string>
+    <string name="dialog_feedback_failed">您的反馈提交失败，请重新提交!</string>
+    
+    <string name="dialog_waybill_orderid">运单:&#160;</string>
+    <string name="dialog_waybill_orderstatus">运单状态:&#160;</string>
+    <string name="dialog_waybill_receive_date">送达时间:&#160;</string>
+    <string name="dialog_waybill_weight_volume">重量/体积:&#160;</string>
+    <string name="dialog_waybill_driver">执行任务司机:&#160;</string>
+    
+    
+    <!-- 帐号提示 -->
+    <string name="account_account_empty">帐号不能为空</string>
+	<string name="account_pasword_empty">密码不能为空</string>
+	<string name="account_account_error">请输入正确的帐号</string>
+	<string name="account_password_error">请输入正确的密码</string>
+	<string name="account_email_error">请输入正确的邮箱</string>
+	<string name="account_login_mobile_err">请输入有效的手机号</string>
+	<string name="account_retrive_pwd_mobvericode">请输入手机号或验证码</string>
+	<string name="account_input_mobile_err">您输入的手机号码不正确</string>
+	<string name="account_get_vericode_success">验证码将以短信形式发送到您的手机</string>
+	<string name="account_get_vericode_failed">获取验证码失败</string>
+	<string name="account_vericode_repeat_get">短时间内不能重复发送验证码</string>
+	<string name="account_vericode_timer_more">该手机号重复获取验证码次数过多，请明天再试</string>
+	<string name="account_retrive_pwd_mobile_unbind">该手机尚未绑定，请确认输入是否正确</string>
+	<string name="account_reset_pwd_new_err">请输入6-14位新密码</string>
+	<string name="account_reset_pwd_new_specail">新密码不能含有特殊字符</string>
+	<string name="account_reset_pwd_new_lessonenum">新密码至少包含1个数字和1个字母</string>
+	<string name="account_reset_pwd_success">重置密码成功, 请使用新密码登录</string>
+    <string name="account_reset_pwd_failed">重置密码失败</string>
+    <string name="account_vericode_has_invalid">验证码已失效,请重新获取</string>
+    <string name="account_vericode_err">短信验证码错误,请重试</string>
+    <string name="account_vericode_has_err">验证码有误</string>
+    <string name="account_vericode_has_used">验证码已校验</string>
+    <string name="account_login_failed">登录失败</string>
+    <string name="account_login_user_err">用户名不存在</string>
+    <string name="account_login_userpwd_err">密码错误</string>
+    <string name="account_logout">退出登录</string>
+    <string name="account_logout_failed">登出失败，请检查网络</string>
+    <string name="account_locate_failed">定位失败，请检查网络连接或到空旷地带重试</string>
+    <string name="account_invalid">您的帐号已在其它设备登录，登录已退出</string> 
+                                                                                                        
+    
+    <string name="common_network_abnormal">网络连接失败，请检查您的网络</string>
+    <string name="common_network_data_update">更新中，请稍后...</string>
+    <string name="common_network_version_update">正在检查更新请稍后...</string>
+    
+    <string name="tip_refreshing">刷新中，请稍后...</string>
+    <string name="tip_logining">正在登录中...</string>
+    <string name="tip_submiting">反馈提交中，请稍后...</string>
+    <string name="tip_sending">提交中...</string>
+    <string name="tip_getting">正在获取中...</string>
+    <string name="tip_freshing">正在刷新中...</string>
+    <string name="tip_loading">加载中...</string>
+    <string name="tip_loading2">正在加载中...</string>
+    <string name="tip_invitting">正在邀请中...</string>
+   
+    
+
+</resources>

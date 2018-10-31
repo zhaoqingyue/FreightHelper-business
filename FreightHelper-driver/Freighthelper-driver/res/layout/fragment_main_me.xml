@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarSize="@dimen/scrollbarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbars="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 我的信息  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_icon="@drawable/me_user"
+                app:vc_title="@string/me_userinfo"
+                app:vc_hasline="false"
+                app:vc_paddingLeft="0.12" />
+
+            <!-- 业务看板  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_bus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_marginTopPercent="@string/common_marginTopPercent"
+                app:vc_icon="@drawable/me_business"
+                app:vc_title="@string/me_bus" />
+
+            <!-- 我的车辆  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_car"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_icon="@drawable/me_mycar"
+                app:vc_title="@string/me_car" />
+
+            <!-- 我的司机  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_driver"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_icon="@drawable/me_mydriver"
+                app:vc_title="@string/me_driver"
+                app:vc_hasline="false" />
+
+            <!-- 反馈  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_marginTopPercent="@string/common_marginTopPercent"
+                app:vc_icon="@drawable/me_feedback"
+                app:vc_title="@string/me_feedback" />
+
+            <!-- 关于  -->
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/me_about"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_icon="@drawable/me_about"
+                app:vc_title="@string/me_about"
+                app:vc_hasline="false" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

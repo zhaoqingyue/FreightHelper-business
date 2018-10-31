@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_widthPercent="90%"
+        android:background="@drawable/shape_prompt_dialog_bg"
+        android:orientation="vertical" >
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8%sh"
+            app:layout_paddingLeftPercent="10%"
+            android:background="@color/main_color" >
+
+            <TextView
+                android:id="@+id/waybill_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:layout_textSizePercent="@string/textsize_50px"
+                android:text="@string/dialog_waybill_orderid"
+                android:textColor="#A3D1B6" />
+
+            <TextView
+                android:id="@+id/waybill_orderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/waybill_title"
+                app:layout_textSizePercent="@string/textsize_50px"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/waybill_cancel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:layout_heightPercent="100%h"
+                app:layout_paddingBottomPercent="35%h"
+                app:layout_paddingLeftPercent="35%h"
+                app:layout_paddingRightPercent="35%h"
+                app:layout_paddingTopPercent="35%h"
+                app:layout_widthPercent="100%h"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_cancel" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="20%sh"
+            app:layout_paddingLeftPercent="10%"
+            app:layout_paddingRightPercent="10%"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_paddingBottomPercent="14%"
+                app:layout_paddingTopPercent="7.5%" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_waybill_img" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layout_marginLeftPercent="4.5%w"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/waybill_send_regionname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+
+                <TextView
+                    android:id="@+id/waybill_send_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_normal_color" />
+
+                <TextView
+                    android:id="@+id/waybill_receive_regionname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="10%h"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+
+                <TextView
+                    android:id="@+id/waybill_receive_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_normal_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="20%sh"
+            app:layout_paddingLeftPercent="10%"
+            app:layout_paddingRightPercent="10%"
+            android:background="#f0f0f0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:text="@string/dialog_waybill_orderstatus"
+                    android:textColor="@color/text_normal_color" />
+
+                <TextView
+                    android:id="@+id/waybill_orderstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="3%h" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:text="@string/dialog_waybill_receive_date"
+                    android:textColor="@color/text_normal_color" />
+
+                <TextView
+                    android:id="@+id/waybill_receive_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="3%h" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:text="@string/dialog_waybill_weight_volume"
+                    android:textColor="@color/text_normal_color" />
+
+                <TextView
+                    android:id="@+id/waybill_weight_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_highlight_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginTopPercent="3%h" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:text="@string/dialog_waybill_driver"
+                    android:textColor="@color/text_normal_color" />
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/waybill_driver_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" >
+
+                    <TextView
+                        android:id="@+id/waybill_driver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/text_highlight_color" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/waybill_driver"
+                        android:layout_alignTop="@+id/waybill_driver"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/waybill_driver"
+                        android:contentDescription="@string/app_name"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icon_phone" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

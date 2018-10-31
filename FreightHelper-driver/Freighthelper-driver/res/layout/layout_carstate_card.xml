@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/carstate_card_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="40%h"
+        app:layout_widthPercent="40%h"
+        app:layout_marginLeftPercent="8%sw"
+        android:contentDescription="@string/app_name" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_marginLeftPercent="3%sw"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/carstate_card_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_textSizePercent="@string/textsize_48px"
+            android:text=""
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/text_highlight_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/carstate_card_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_textSizePercent="@string/textsize_44px"
+            android:text=""
+            android:textColor="@color/text_highlight_color" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

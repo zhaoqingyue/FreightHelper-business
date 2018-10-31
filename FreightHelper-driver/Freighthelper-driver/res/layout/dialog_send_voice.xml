@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:layout_width="870px"
+        android:layout_height="140px"
+        android:background="@color/main_color"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/dialog_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dialog_title_maginleft_82"
+            android:text="语音窗口"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/dialog_title_size_45" />
+
+        <ImageView
+            android:id="@+id/dialog_title_img_cancel"
+            android:layout_width="@dimen/dialog_cancel_img_50"
+            android:layout_height="@dimen/dialog_cancel_img_50"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dialog_cancel_img_55"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/dialog_send_voice_close" />
+    </RelativeLayout>
+    
+    <!-- 内容 -->
+
+    <LinearLayout
+        android:layout_width="870px"
+        android:layout_height="330px"
+        android:background="@color/dialog_sendvoice_content_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/dialog_sendvoice_content_container"
+            android:layout_width="870px"
+            android:layout_height="330px"
+            android:background="@color/dialog_sendvoice_content_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <RelativeLayout
+                android:id="@+id/dialog_sendvoice_img"
+                android:layout_width="wrap_content"
+                android:layout_height="330px" >
+
+                <ImageView
+                    android:id="@+id/dialog_send_voice_bg"
+                    android:layout_width="200px"
+                    android:layout_height="84px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70px"
+                    app:layout_auto_basewidth="height"
+                    android:background="@drawable/dialog_send_voice_bg" />
+
+                <ImageView
+                    android:id="@+id/dialog_send_voice_anim"
+                    android:layout_width="34px"
+                    android:layout_height="37px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="110px"
+                    app:layout_auto_basewidth="height"
+                    android:src="@drawable/dialog_send_voice_anim" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dialog_sendvoice_text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/dialog_sendvoice_img"
+                android:text="@string/dialog_audio_recoder_time"
+                android:textColor="@color/dialog_sendvoice_text_color"
+                android:textSize="@dimen/dialog_send_voice_time" />
+
+            <ImageView
+                android:id="@+id/dialog_sendvoice_delete_btn"
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:layout_marginLeft="30px"
+                app:layout_auto_basewidth="height"
+                android:src="@drawable/selector_btn_dialog_sendvoice_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="870px"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <!-- 下部按钮 -->
+
+    <LinearLayout
+        android:layout_width="870px"
+        android:layout_height="153px"
+        android:background="@color/bar_bg_color"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/dialog_sendvoice_voiceing_img"
+            android:layout_width="95px"
+            android:layout_height="95px"
+            android:layout_marginLeft="45px"
+            app:layout_auto_basewidth="height"
+            android:src="@drawable/dialog_sendvoice_voiceing_img" />
+
+        <Button
+            android:id="@+id/dialog_sendvoice_button_round_bg"
+            android:layout_width="520px"
+            android:layout_height="110px"
+            android:layout_marginLeft="38px"
+            android:background="@drawable/dialog_sendvoice_button_round_bg"
+            android:text="@string/dialog_sendvoice_press_audio"
+            android:textColor="@color/dialog_sendvoice_text_color"
+            android:textSize="42px" />
+
+        <Button
+            android:id="@+id/dialog_sendvoice_btn_submit"
+            style="@style/dialog_sendvoice_submit"
+            android:layout_width="110px"
+            android:layout_height="60px"
+            android:layout_marginLeft="35px"
+            android:text="@string/dialog_sendvoice_btn_text_submit" />
+    </LinearLayout>
+
+</LinearLayout>

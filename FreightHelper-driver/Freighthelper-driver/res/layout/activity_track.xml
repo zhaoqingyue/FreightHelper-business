@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windows_color" >
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="65%sh" >
+
+            <!-- 地图 -->
+
+            <FrameLayout
+                android:id="@+id/track_mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/track_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="6.5%sh"
+                android:background="#cfE0B44E"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    app:layout_heightPercent="40%h"
+                    app:layout_widthPercent="40%h"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_track_abnormal"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_paddingLeftPercent="5%"
+                    app:layout_textSizePercent="@string/textsize_48px"
+                    android:gravity="center"
+                    android:text="当前时间段无轨迹数据"
+                    android:textColor="@color/white" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/track_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%sw"
+                app:layout_marginTopPercent="0.0%sh"
+                app:layout_paddingPercent="@string/common_paddingLeftPercent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/track_detail_mileage_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/track_detail_mileage_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        android:text="总里程"
+                        android:textColor="@color/text_highlight_color" />
+
+                    <TextView
+                        android:id="@+id/track_detail_mileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_mileage_title"
+                        android:layout_toRightOf="@+id/track_detail_mileage_title"
+                        app:layout_marginLeftPercent="1%sw"
+                        app:layout_textSizePercent="@string/textsize_48px"
+                        android:text="0"
+                        android:textColor="@color/text_highlight_color"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/track_detail_mileage_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_mileage_title"
+                        android:layout_toRightOf="@+id/track_detail_mileage"
+                        app:layout_textSizePercent="@string/textsize_40px"
+                        android:text="公里"
+                        android:textColor="@color/text_normal_color" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/track_detail_max_speed_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="1.5%sw" >
+
+                    <TextView
+                        android:id="@+id/track_detail_max_speed_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        android:text="最高时速"
+                        android:textColor="@color/text_highlight_color" />
+
+                    <TextView
+                        android:id="@+id/track_detail_max_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_max_speed_title"
+                        android:layout_toRightOf="@+id/track_detail_max_speed_title"
+                        app:layout_marginLeftPercent="1%sw"
+                        app:layout_textSizePercent="@string/textsize_48px"
+                        android:text="0"
+                        android:textColor="@color/text_highlight_color"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/track_detail_max_speed_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_max_speed_title"
+                        android:layout_toRightOf="@+id/track_detail_max_speed"
+                        app:layout_textSizePercent="@string/textsize_40px"
+                        android:text="km/h"
+                        android:textColor="@color/text_normal_color" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:id="@+id/track_detail_alarm_num_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="1.5%sw" >
+
+                    <TextView
+                        android:id="@+id/track_detail_alarm_num_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        android:text="警情总数"
+                        android:textColor="@color/text_highlight_color" />
+
+                    <TextView
+                        android:id="@+id/track_detail_alarm_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_alarm_num_title"
+                        android:layout_toRightOf="@+id/track_detail_alarm_num_title"
+                        app:layout_marginLeftPercent="1%sw"
+                        app:layout_textSizePercent="@string/textsize_48px"
+                        android:text="0"
+                        android:textColor="@color/text_highlight_color"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/track_detail_alarm_num_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_detail_alarm_num_title"
+                        android:layout_toRightOf="@+id/track_detail_alarm_num"
+                        app:layout_textSizePercent="@string/textsize_40px"
+                        android:text="个"
+                        android:textColor="@color/text_normal_color" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <TextView
+                android:id="@+id/track_cur_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/track_detail"
+                app:layout_marginLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_marginTopPercent="12%sh"
+                app:layout_paddingBottomPercent="4%sw"
+                app:layout_paddingLeftPercent="3%sw"
+                app:layout_paddingRightPercent="3%sw"
+                app:layout_paddingTopPercent="2%sw"
+                app:layout_textSizePercent="@string/textsize_44px"
+                android:background="@drawable/icon_track_speed"
+                android:gravity="center"
+                android:text="62km/h"
+                android:textColor="@color/main_color"
+                android:visibility="gone" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="13.0%sh"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                    app:layout_paddingRightPercent="@string/common_paddingRightPercent" >
+
+                    <!-- 轨迹时间 -->
+
+                    <TextView
+                        android:id="@+id/track_time_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        android:text="@string/track_time_title"
+                        android:textColor="@color/text_normal_color" />
+
+                    <!-- 前一天 -->
+
+                    <TextView
+                        android:id="@+id/track_time_yesterday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/track_time_title"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        app:layout_widthPercent="30.0%w"
+                        android:gravity="center_horizontal"
+                        android:text="@string/track_time_yesterday"
+                        android:textColor="@color/text_highlight_color" />
+
+                    <View
+                        android:id="@+id/track_time_line"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/track_time_yesterday"
+                        android:layout_alignTop="@+id/track_time_yesterday"
+                        android:layout_toRightOf="@+id/track_time_yesterday"
+                        android:background="@color/windows_color" />
+
+                    <!-- 自定义 -->
+
+                    <TextView
+                        android:id="@+id/track_time_custom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/track_time_line"
+                        app:layout_textSizePercent="@string/textsize_44px"
+                        app:layout_widthPercent="30.0%w"
+                        android:gravity="center_horizontal"
+                        android:text="@string/track_time_custom"
+                        android:textColor="@color/main_color" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+
+                <com.zhy.android.percent.support.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_marginTopPercent="1.5%sh"
+                    app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                    app:layout_paddingRightPercent="@string/common_paddingRightPercent" >
+
+                    <!-- 起始时间 -->
+
+                    <TextView
+                        android:id="@+id/track_time_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_textSizePercent="@string/textsize_42px"
+                        android:text=""
+                        android:textColor="@color/text_normal_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:layout_textSizePercent="@string/textsize_42px"
+                        android:text="@string/track_time_to"
+                        android:textColor="@color/text_highlight_color" />
+
+                    <!-- 结束时间 -->
+
+                    <TextView
+                        android:id="@+id/track_time_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:layout_textSizePercent="@string/textsize_42px"
+                        android:text=""
+                        android:textColor="@color/text_normal_color" />
+                </com.zhy.android.percent.support.PercentRelativeLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/track_speed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="8.0%sh"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                android:background="#EFEFEF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- 速率 -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text="@string/track_speed"
+                    android:textColor="@color/text_normal_color" />
+
+                <!-- 1倍速 -->
+
+                <TextView
+                    android:id="@+id/track_speed_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text="@string/track_speed_one"
+                    android:textColor="@drawable/selector_play_speed_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <!-- 2倍速 -->
+
+                <TextView
+                    android:id="@+id/track_speed_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text="@string/track_speed_two"
+                    android:textColor="@drawable/selector_play_speed_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <!-- 3倍速 -->
+
+                <TextView
+                    android:id="@+id/track_speed_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text="@string/track_speed_three"
+                    android:textColor="@drawable/selector_play_speed_text" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <!-- 4倍速 -->
+
+                <TextView
+                    android:id="@+id/track_speed_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:text="@string/track_speed_four"
+                    android:textColor="@drawable/selector_play_speed_text" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="10.0%sh"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                android:background="#EFEFEF"
+                android:orientation="horizontal" >
+
+                <!-- 播放/暂停 -->
+
+                <ImageView
+                    android:id="@+id/track_play_img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_vertical"
+                    app:layout_heightPercent="50%h"
+                    app:layout_widthPercent="50%h"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/selector_btn_pause_bg" />
+
+                <TextView
+                    android:id="@+id/track_play_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="3%w"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:gravity="center_vertical"
+                    android:text="@string/track_play"
+                    android:textColor="@color/main_color" />
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:layout_marginLeftPercent="8%w"
+                    android:orientation="horizontal" >
+
+                    <!-- 起点 -->
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_heightPercent="40%h"
+                        app:layout_widthPercent="40%h"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_track_start" />
+
+                    <ProgressBar
+                        android:id="@+id/track_play_progressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_marginLeft="-0.5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:progress="0"
+                        android:layout_marginRight="-0.5dp"
+                        android:progressDrawable="@drawable/layer_play_progress" />
+
+                    <!-- 终点 -->
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_heightPercent="40%h"
+                        app:layout_widthPercent="40%h"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_track_end" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

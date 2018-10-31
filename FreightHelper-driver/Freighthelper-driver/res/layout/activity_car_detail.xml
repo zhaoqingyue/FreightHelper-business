@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="48%sh" >
+
+        <!-- 地图 -->
+
+        <FrameLayout
+            android:id="@+id/car_detail_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 总里程 -->
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8.0%sh"
+            android:background="#efFFFFFF" >
+
+            <TextView
+                android:id="@+id/car_detail_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:text="@string/car_detail_mileage"
+                android:textColor="@color/text_highlight_color" />
+
+            <TextView
+                android:id="@+id/car_detail_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/text_normal_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/windows_color" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <!-- 地址 -->
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/car_detail_pos_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            app:layout_heightPercent="8.0%sh"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="#efFFFFFF"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                app:layout_heightPercent="27%h"
+                app:layout_marginRightPercent="3%sw"
+                app:layout_widthPercent="36%h"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_pos" />
+
+            <TextView
+                android:id="@+id/car_detail_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_textSizePercent="4.8%sw"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/black" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/windows_color" />
+
+    <ScrollView
+        android:id="@+id/car_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:scrollbarSize="@dimen/scrollbarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbars="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 主司机 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/car_detail_mdriver"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_icon="@drawable/icon_mobile_mdriver"
+                app:vc_ismobile="true"
+                app:vc_title="" />
+
+            <!-- 副司机 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/car_detail_sdriver"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_content=""
+                app:vc_hasarrow="false"
+                app:vc_hascontent="true"
+                app:vc_hasline="false"
+                app:vc_icon="@drawable/icon_mobile_sdriver"
+                app:vc_ismobile="true"
+                app:vc_title="" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/car_detail_task_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 车辆实时数据 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/car_detail_task_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:layout_marginTopPercent="@string/common_marginTopPercent"
+                    app:ddt_bg_color="@color/white"
+                    app:ddt_title="@string/car_detail_task_detail"
+                    app:ddt_title_color="@color/black" />
+
+                <!-- 车辆实时详情数据 -->
+
+                <include
+                    android:id="@+id/car_detail_task_detail_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/layout_carstate_detail"
+                    android:visibility="gone" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <!-- 当日运单数据 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:id="@+id/car_detail_task_store"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_marginTopPercent="@string/common_marginTopPercent"
+                app:ddt_bg_color="@color/white"
+                app:ddt_title="@string/car_detail_task_store"
+                app:ddt_title_color="@color/black" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/car_detail_task_store_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.mtq.bus.freighthelper.ui.customview.ListViewForScrollView
+                    android:id="@+id/car_detail_task_store_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/car_detail_task_store_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="7.2%sh"
+                    app:layout_paddingTopPercent="1.8%sh"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:gravity="center"
+                    android:text="无运单信息"
+                    android:textColor="@color/text_highlight_color"
+                    android:visibility="visible" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <!-- 当日点火熄火数据 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:id="@+id/car_detail_task_navi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_marginTopPercent="@string/common_marginTopPercent"
+                app:ddt_bg_color="@color/white"
+                app:ddt_title="@string/car_detail_task_navi"
+                app:ddt_title_color="@color/black" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/car_detail_task_navi_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.mtq.bus.freighthelper.ui.customview.ListViewForScrollView
+                    android:id="@+id/car_detail_task_navi_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent" />
+
+                <TextView
+                    android:id="@+id/car_detail_task_navi_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="7.2%sh"
+                    app:layout_paddingTopPercent="1.8%sh"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:gravity="center"
+                    android:text="暂无点火熄火数据"
+                    android:textColor="@color/text_highlight_color"
+                    android:visibility="visible" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_btn_heightPercent"
+                app:layout_marginTopPercent="@string/common_marginTopPercent"
+                android:orientation="horizontal" >
+
+                <!-- 车辆调度 -->
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/car_detail_schedule"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bth_white_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_heightPercent="40%h"
+                        app:layout_widthPercent="40%h"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_car_schedule" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_marginLeftPercent="3%sw"
+                        app:layout_textSizePercent="@string/textsize_50px"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_detail_schedule"
+                        android:textColor="@color/main_color" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_heightPercent="60%h"
+                        android:background="@color/windows_color" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+
+                <!-- 轨迹回放 -->
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:id="@+id/car_detail_track"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bth_white_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_heightPercent="40%h"
+                        app:layout_widthPercent="40%h"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_car_track" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_marginLeftPercent="3%sw"
+                        app:layout_textSizePercent="@string/textsize_50px"
+                        android:gravity="center_vertical"
+                        android:text="@string/car_detail_track"
+                        android:textColor="@color/main_color" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

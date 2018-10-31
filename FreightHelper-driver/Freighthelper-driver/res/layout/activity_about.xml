@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:orientation="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="32%h"
+            app:layout_paddingBottomPercent="3%h"
+            app:layout_paddingTopPercent="3%h"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="20%w"
+                app:layout_widthPercent="50%w"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/matiquan_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginBottomPercent="2%h"
+                app:layout_marginTopPercent="5%h"
+                app:layout_textSizePercent="@string/textsize_50px"
+                android:gravity="center_horizontal"
+                android:text="@string/app_name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/about_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="@string/textsize_44px"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/text_normal_color" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <!-- 检查更新 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/about_update"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:layout_marginTopPercent="@string/common_marginTopPercent"
+            app:vc_content=""
+            app:vc_content_color="@color/main_color"
+            app:vc_hascontent="true"
+            app:vc_title="@string/about_update" />
+
+        <!-- 法律声明 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/about_legal_notice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            android:visibility="gone"
+            app:vc_title="@string/about_legal_notice" />
+
+        <!-- 用户服务协议 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/about_user_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_hasline="false"
+            app:vc_title="@string/about_user_agreement" />
+
+        <!-- 软件使用许可协议 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/about_license_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            android:visibility="gone"
+            app:vc_hasline="false"
+            app:vc_title="@string/about_license_agreement" />
+
+        <!-- 客服电话 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/about_customer_service"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:layout_marginTopPercent="@string/common_marginTopPercent"
+            app:vc_content="400-789-0118"
+            app:vc_hasarrow="false"
+            app:vc_hascontent="true"
+            app:vc_ismobile="true"
+            app:vc_title="@string/about_customer_service" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

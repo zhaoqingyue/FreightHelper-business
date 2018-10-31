@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color"
+    android:orientation="vertical"
+    android:paddingTop="1dp" >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/rl_car_condtion_data_part1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/car_state_data_part"
+        android:background="@color/white" >
+
+        <!-- 剩余油量 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_remain_fuel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_remain_fuel"
+            app:csc_title="@string/car_state_remain_fuel" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_gradient_line_top" />
+
+        <!-- 电瓶电压 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_battery_voltage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_battery_voltage"
+            app:csc_title="@string/car_state_battery_voltage" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/shape_gradient_line_left" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/shape_gradient_line_right" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/car_state_data_part"
+        android:background="@color/white" >
+
+        <!-- 发动机转速 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_engine_speed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_engine_speed"
+            app:csc_title="@string/car_state_engine_speed" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/windows_color" />
+
+        <!-- 车速 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_car_speed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_car_speed"
+            app:csc_title="@string/car_state_car_speed" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/shape_gradient_line_left" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_widthPercent="50%"
+            android:background="@drawable/shape_gradient_line_right" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/car_state_data_part"
+        android:background="@color/white" >
+
+        <!-- 冷却温度 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_coolant_temperature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_coolant_temperature"
+            app:csc_title="@string/car_state_coolant_temperature" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_gradient_line_bottom" />
+
+        <!-- 瞬时油耗 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.CarStateCard
+            android:id="@+id/car_state_moment_fuel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            app:layout_widthPercent="50%"
+            app:csc_content="暂无数据"
+            app:csc_icon="@drawable/car_state_moment_fuel"
+            app:csc_title="@string/car_state_moment_fuel" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <!-- 车厢温度 -->
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/car_detail_temperature_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.mtq.bus.freighthelper.ui.customview.DropDownText
+            android:id="@+id/car_detail_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            app:layout_heightPercent="@string/common_item_heightPercent"
+            app:ddt_bg_color="@color/white"
+            app:ddt_dropable="false"
+            app:ddt_title="@string/car_detail_temperature"
+            app:ddt_title_color="@color/black" />
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%sh"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <!-- 1# -->
+
+            <com.mtq.bus.freighthelper.ui.customview.CarCompartTemp
+                android:id="@+id/car_detail_temperature0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cct_content="暂无数据"
+                app:cct_title="1#" />
+
+            <!-- 2# -->
+
+            <com.mtq.bus.freighthelper.ui.customview.CarCompartTemp
+                android:id="@+id/car_detail_temperature1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cct_content="暂无数据"
+                app:cct_title="2#" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%sh"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <!-- 3# -->
+
+            <com.mtq.bus.freighthelper.ui.customview.CarCompartTemp
+                android:id="@+id/car_detail_temperature2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cct_content="暂无数据"
+                app:cct_title="3#" />
+
+            <!-- 4# -->
+
+            <com.mtq.bus.freighthelper.ui.customview.CarCompartTemp
+                android:id="@+id/car_detail_temperature3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:cct_content="暂无数据"
+                app:cct_title="4#" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="2.8%sh"
+            android:background="@color/white" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

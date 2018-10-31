@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        android:background="@color/bar_bg_color" >
+
+        <ImageView
+            android:id="@+id/title_left_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerVertical="true"
+            app:layout_heightPercent="100%h"
+            app:layout_paddingBottomPercent="33%h"
+            app:layout_paddingLeftPercent="40%h"
+            app:layout_paddingRightPercent="40%h"
+            app:layout_paddingTopPercent="33%h"
+            app:layout_widthPercent="100%h"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/selector_btn_back_bg" />
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <!-- 运单 -->
+
+            <TextView
+                android:id="@+id/business_waybill"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                app:layout_heightPercent="70%h"
+                app:layout_textSizePercent="@string/textsize_44px"
+                app:layout_widthPercent="22.6%sw"
+                android:background="@drawable/selector_bookmark_bg"
+                android:gravity="center"
+                android:text="@string/business_waybill"
+                android:textColor="@drawable/selector_bookmark_text" />
+
+            <!-- 运输计划 -->
+
+            <TextView
+                android:id="@+id/business_task"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/business_waybill"
+                app:layout_heightPercent="70%h"
+                app:layout_textSizePercent="@string/textsize_44px"
+                app:layout_widthPercent="22.6%sw"
+                android:background="@drawable/selector_bookmark_bg"
+                android:gravity="center"
+                android:text="@string/business_task"
+                android:textColor="@drawable/selector_bookmark_text" />
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <com.mtq.bus.freighthelper.ui.customview.NoScrollViewPager
+        android:id="@+id/business_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windows_color"
+        android:orientation="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_paddingBottomPercent="5%h"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            app:layout_paddingTopPercent="5%h"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/msg_sys_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="5%w"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/msg_sys_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_paddingBottomPercent="5%h"
+                app:layout_paddingTopPercent="5%h"
+                app:layout_textSizePercent="4.5%w"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/msg_sys_detail_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:layout_textSizePercent="4.5%w"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/text_normal_color" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

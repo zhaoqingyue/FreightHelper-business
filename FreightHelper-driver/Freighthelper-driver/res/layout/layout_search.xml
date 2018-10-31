@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="40%h"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        app:layout_widthPercent="40%h"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_edit_search" />
+
+    <com.mtq.bus.freighthelper.ui.customview.ClearEditText
+        android:id="@+id/driver_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_paddingRightPercent="5%"
+        app:layout_textSizePercent="5%w"
+        android:background="@color/white"
+        android:hint="@string/saerch_driver_hint"
+        android:singleLine="true"
+        android:textColor="@color/edit_clear_color"
+        android:textColorHint="@color/edit_clear_color" />
+
+</com.zhy.android.percent.support.PercentLinearLayout>

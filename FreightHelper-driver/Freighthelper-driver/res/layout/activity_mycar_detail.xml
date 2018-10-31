@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/windows_color" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/windows_color"
+            android:scrollbarSize="@dimen/scrollbarSize"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbars="vertical" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:id="@+id/mycar_detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!-- 基本信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mycar_detail_baseinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mycar_base_info" />
+
+                <!-- 车牌 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_license" />
+
+                <!-- 车辆属性 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_source" />
+
+                <!-- 所属车队 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_arrowicon="@drawable/icon_drop_down"
+                    app:vc_clickable="false"
+                    app:vc_content=""
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_dropable="true"
+                    app:vc_title="@string/mycar_group" />
+
+                <!-- 司机信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mycar_detail_driver_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mycar_driver_info" />
+
+                <!-- 主司机 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_mdriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_icon="@drawable/icon_mobile_mdriver"
+                    app:vc_ismobile="true"
+                    app:vc_title="" />
+
+                <!-- 副司机 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_sdriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_icon="@drawable/icon_mobile_sdriver"
+                    app:vc_ismobile="true"
+                    app:vc_title="" />
+
+                <!-- 车辆规格信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mycar_detail_format_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mycar_format_info" />
+
+                <!-- 车辆类型 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_carmodel"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_carmodel" />
+
+                <!-- 车型分类 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_cartype"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_title="@string/mycar_cartype" />
+
+                <!-- 车辆设备信息 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                    android:id="@+id/mycar_detail_device_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_ddt_heightPercent"
+                    app:ddt_dropable="false"
+                    app:ddt_title="@string/mycar_device_info" />
+
+                <!-- 设备类型 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_device_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_device_type" />
+
+                <!-- 设备型号 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_device_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_device_model" />
+
+                <!-- 设备终端号 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_device_idsn"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_title="@string/mycar_device_terminal" />
+
+                <!-- SIM卡号 -->
+
+                <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                    android:id="@+id/mycar_detail_device_idphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="@string/common_vc_heightPercent"
+                    app:vc_content=""
+                    app:vc_hasarrow="false"
+                    app:vc_hascontent="true"
+                    app:vc_hasline="false"
+                    app:vc_title="@string/mycar_device_sim" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+        </ScrollView>
+        
+        <!-- 加载失败 -->
+
+        <include
+            android:id="@+id/mycar_detail_failed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_failed"
+            android:visibility="gone" />
+
+        <!-- 网络异常 -->
+
+        <include
+            android:id="@+id/mycar_detail_net_abnormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_net_abnormal"
+            android:visibility="gone" />
+
+        <!-- 正在加载 -->
+
+        <include
+            android:id="@+id/mycar_detail_laoding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_loading" />
+        
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

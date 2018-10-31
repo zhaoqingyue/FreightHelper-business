@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/map_select_point_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            app:layout_heightPercent="15%h"
+            app:layout_paddingBottomPercent="5%h"
+            app:layout_widthPercent="7%h"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_water_select" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/windows_color" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="20%sh"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/prl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_confirm"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:visibility="visible" >
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_textSizePercent="5%sw"
+                    android:gravity="center"
+                    android:text="当前位置"
+                    android:textColor="@color/black" />
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_heightPercent="4%sw"
+                        app:layout_marginRightPercent="1%sw"
+                        app:layout_widthPercent="4%sw"
+                        android:src="@drawable/icon_poi" />
+
+                    <TextView
+                        android:id="@+id/tv_position_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:layout_textSizePercent="4%sw"
+                        android:gravity="center"
+                        android:text="当前具体位置"
+                        android:textColor="@color/text_normal_color" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/prl_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="visible" >
+
+                <com.zhy.android.percent.support.PercentLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <ProgressBar
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        app:layout_heightPercent="35%h"
+                        app:layout_marginRightPercent="1%sw"
+                        app:layout_widthPercent="35%h"
+                        android:indeterminateDrawable="@drawable/rotate_progress_animation"
+                        android:indeterminateDuration="1000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        app:layout_textSizePercent="@string/textsize_50px"
+                        android:gravity="center"
+                        android:text="正在获取位置..."
+                        android:textColor="@color/black" />
+                </com.zhy.android.percent.support.PercentLinearLayout>
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            app:layout_heightPercent="37%h"
+            app:layout_marginBottomPercent="3%w"
+            app:layout_marginLeftPercent="13%w"
+            app:layout_marginRightPercent="13%w"
+            app:layout_marginTopPercent="0%w"
+            app:layout_textSizePercent="@string/textsize_50px"
+            android:background="@drawable/selector_btn_green_bg"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="确认选点"
+            android:textColor="@drawable/selector_btn_green_text" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

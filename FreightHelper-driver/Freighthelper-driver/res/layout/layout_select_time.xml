@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%sh"
+        app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+        app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+        android:background="#C6C6C6" >
+
+        <TextView
+            android:id="@+id/select_time_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:layout_textSizePercent="@string/textsize_44px"
+            android:text="@string/select_time_cancel"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/select_time_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_textSizePercent="@string/textsize_50px"
+            android:text="@string/select_time_start_time"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/select_time_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:layout_textSizePercent="@string/textsize_44px"
+            android:text="@string/select_time_sure"
+            android:textColor="@color/main_color" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="24%sh"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/select_time_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/select_time_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/select_time_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/select_time_hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

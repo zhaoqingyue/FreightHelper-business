@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:scrollbarSize="@dimen/scrollbarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbars="vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 反馈类型 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/feedback_type"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_arrowicon="@drawable/icon_drop_down"
+                app:vc_clickable="false"
+                app:vc_content=""
+                app:vc_hascontent="true"
+                app:vc_dropable="true"
+                app:vc_title="@string/feedback_type"
+                app:vc_withstar="true" />
+
+            <!-- 设备类型 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+                android:id="@+id/feedback_device_type"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:vc_arrowicon="@drawable/icon_drop_down"
+                app:vc_clickable="false"
+                app:vc_content=""
+                app:vc_hascontent="true"
+                app:vc_dropable="true"
+                app:vc_title="@string/feedback_device_type"
+                app:vc_withstar="true"
+                android:visibility="gone" />
+
+            <!-- 标题 -->
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:id="@+id/feedback_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_vc_heightPercent"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                android:orientation="horizontal"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/feedback_title_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:layout_centerVertical="true"
+                    android:text="@string/feedback_title"
+                    android:textColor="@color/text_highlight_color" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="16%h"
+                    android:layout_toRightOf="@+id/feedback_title_pre"
+                    app:layout_marginLeftPercent="2%w"
+                    android:layout_centerVertical="true"
+                    app:layout_widthPercent="16%h"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_star" />
+
+                <EditText
+                    android:id="@+id/feedback_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    app:layout_textSizePercent="@string/textsize_42px"
+                    android:maxLength="16"
+                    android:background="@null"
+                    android:hint=""
+                    android:gravity="right|center_vertical"
+                    android:text=""
+                    android:textColor="@color/text_normal_color"
+                    android:textColorHint="@color/text_normal_color"
+                    android:textCursorDrawable="@drawable/shape_edit_cursor" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <!-- 消息内容 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_ddt_heightPercent"
+                app:ddt_dropable="false"
+                app:ddt_title="@string/feedback_content" />
+
+            <com.zhy.android.percent.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="20%h"
+                app:layout_paddingBottomPercent="@string/common_marginTopPercent"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                app:layout_paddingTopPercent="@string/common_marginTopPercent"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/feedback_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/feedback_content_hint"
+                    android:textColor="@color/text_highlight_color"
+                    android:textColorHint="@color/text_normal_color"
+                    android:textCursorDrawable="@drawable/shape_edit_cursor" />
+
+                <TextView
+                    android:id="@+id/feedback_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:layout_textSizePercent="@string/textsize_46px"
+                    android:gravity="right"
+                    android:text="0/300"
+                    android:textColor="@color/text_normal_color" />
+            </com.zhy.android.percent.support.PercentLinearLayout>
+
+            <!-- 图片 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_ddt_heightPercent"
+                app:ddt_dropable="false"
+                app:ddt_title="@string/feedback_pic" />
+
+            <com.zhy.android.percent.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="16%sh"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <com.mtq.bus.freighthelper.ui.customview.NoScrollGridView
+                    android:id="@+id/feedback_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:numColumns="5"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <TextView
+                    android:id="@+id/feedback_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_marginLeftPercent="21%sw"
+                    app:layout_textSizePercent="@string/textsize_44px"
+                    android:gravity="center_vertical"
+                    android:text="请您上传图片"
+                    android:textColor="@color/text_normal_color" />
+            </com.zhy.android.percent.support.PercentRelativeLayout>
+
+            <!-- 联系电话 -->
+
+            <com.mtq.bus.freighthelper.ui.customview.DropDownText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="@string/common_ddt_heightPercent"
+                app:ddt_dropable="false"
+                app:ddt_title="@string/feedback_mobile" />
+
+            <EditText
+                android:id="@+id/feedback_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="10%h"
+                app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:background="@color/white"
+                android:hint="@string/feedback_mobile_hint"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/text_highlight_color"
+                android:textColorHint="@color/text_normal_color"
+                android:textCursorDrawable="@drawable/shape_edit_cursor" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </ScrollView>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

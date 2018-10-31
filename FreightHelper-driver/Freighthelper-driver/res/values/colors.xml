@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标题栏背景颜色 -->
+    <color name="bar_bg_color">#F5F5F5</color>
+    <!-- 标题栏文字颜色 -->
+    <color name="bar_text_color">#5C5C5C</color>
+
+    <!-- 界面背景颜色 -->
+    <color name="windows_color">#E8E8E8</color>
+    <!-- 主色(按钮及焦点颜色) -->
+    <color name="main_color">#009C52</color>
+
+    <!-- 辅助文字颜色 -->
+    <color name="text_normal_color">#989898</color>
+    <!-- 重要文字颜色(高亮) -->
+    <color name="text_highlight_color">#2D2D2D</color>
+
+    <!-- 导航栏文字颜色 -->
+    <color name="tab_text_nor_color">#888888</color>
+    <color name="tab_text_select_color">#009C52</color>
+
+    <!-- 分割线颜色 -->
+    <color name="line_color">#D7D7D7</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="translucent">#d0000000</color>
+    <color name="transparent">#00111111</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#e23c42</color>
+    <color name="black">#000000</color>
+    <color name="gray">#969696</color>
+    <color name="purple">#E3CE6D</color>
+    <color name="blue">#32A5E6</color>
+    <color name="green">#3DB87E</color>
+    <color name="light_green">#84C67D</color>
+    <color name="orangered">#F08B41</color>
+    <!-- 橙色 -->
+    <color name="orange">#FF7800</color>
+    <color name="edit_clear_color">#888888</color>
+    <color name="mobile_color">#009C52</color>
+
+    <!-- 卡片颜色 -->
+    <color name="card_color">#363c40</color>
+
+    <!-- 列表点击颜色 -->
+    <color name="list_press_color">#26292e</color>
+
+    <!-- 输入框背景颜色 -->
+    <color name="edit_bg">#CDD1D4</color>
+
+    <!-- 特殊按钮颜色 (获取验证码、忘记密码、公共编辑框确定按钮) -->
+    <color name="specific_color">#636770</color>
+
+    <!--  -->
+    <color name="wheel_line_color">#414145</color>
+
+    <!-- wheel背景颜色 -->
+    <color name="wheel_color">#111217</color>
+    <color name="edit_normal">#7A7A7A</color>
+    <color name="edit_hint">#7A7A7A</color>
+    <color name="triangle_color">#ff63676f</color>
+    <color name="text_count_down_color">#ff9900</color>
+
+    <!-- 发送语音背景 -->
+    <color name="dialog_sendvoice_content_bg">#e6e6e6</color>
+    <color name="dialog_sendvoice_text_color">#222222</color>
+    <color name="dialog_sendvoice_voicebtn_bg">#f0f0f0</color>
+
+    <!-- 有阴影的弹窗 -->
+    <color name="default_shadow_color">#88757575</color>
+    <color name="default_fill_color">#ffffff</color>
+
+</resources>

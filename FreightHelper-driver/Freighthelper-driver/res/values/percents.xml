@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="textsize_36px">3.6%sw</string>
+    <string name="textsize_38px">3.8%sw</string>
+    <string name="textsize_40px">4.0%sw</string>
+    <string name="textsize_42px">4.2%sw</string>
+    <string name="textsize_46px">4.6%sw</string>
+    <string name="textsize_44px">4.4%sw</string>
+    <string name="textsize_48px">4.8%sw</string>
+    <string name="textsize_50px">5.0%sw</string>
+    <string name="textsize_52px">5.2%sw</string>
+    <string name="textsize_54px">5.4%sw</string>
+    <string name="textsize_56px">5.6%sw</string>
+    <string name="textsize_58px">5.8%sw</string>
+    <string name="textsize_60px">6.0%sw</string>
+    <string name="textsize_90px">9.0%sw</string>
+  
+    <string name="textsize_btn">5.0%sw</string>
+    
+    <string name="layout_title_height">9%sh</string>
+    <string name="common_vc_heightPercent">9.0%sh</string>
+    <string name="common_ddt_heightPercent">5.7%sh</string>
+	<string name="common_btn_heightPercent">10%sh</string>
+	<string name="common_btn_widthPercent">80%sw</string>
+	<string name="common_item_heightPercent">8.35%sh</string>
+    <string name="common_paddingLeftPercent">6%sw</string>
+    <string name="common_paddingRightPercent">6%sw</string>
+    <string name="common_marginTopPercent">1.8%sh</string>
+    
+    <string name="common_voice_paddingTopPercent">1.6%sh</string>
+    <string name="common_voice_heightPercent">6%sh</string>
+    <string name="common_voice_paddingLeftPercent">9%sw</string>
+    <string name="common_voice_paddingRightPercent">50%sw</string>
+    <string name="scedule_voice_paddingLeftPercent">2%sh</string>
+    
+    <string name="car_state_data_part">12%sh</string>
+    
+    <string name="line_marginLeftPercent">5%w</string>
+    <string name="line_marginRightPercent">5%w</string>
+    
+    <!-- 登录 -->
+    <string name="login_edit_widthPercent">71.3%w</string>
+    <string name="login_edit_heightPercent">14%h</string>
+    
+    <string name="login_btn_widthPercent">71.3%w</string>
+    <string name="login_btn_heightPercent">14%h</string>
+    
+    <!-- 个人信息 -->
+    <string name="userinfo_height">21.35%h</string>
+    <string name="sex_height">21.35%h</string>
+    <string name="car_brand_height">42.7%h</string>
+    <string name="car_height">21.35%h</string>
+
+</resources>

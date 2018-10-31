@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color" >
+
+    <!-- 暂无消息 -->
+
+    <TextView
+        android:id="@+id/msg_sys_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_textSizePercent="@string/textsize_50px"
+        android:gravity="center"
+        android:text="@string/msg_no_msg"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <!-- 加载失败 -->
+
+    <include
+        android:id="@+id/msg_sys_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_failed"
+        android:visibility="gone" />
+
+    <!-- 网络异常 -->
+
+    <include
+        android:id="@+id/msg_sys_net_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_net_abnormal"
+        android:visibility="gone" />
+
+    <!-- 正在加载 -->
+
+    <include
+        android:id="@+id/msg_sys_laoding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading" />
+
+    <com.mtq.bus.freighthelper.ui.customview.ListViewForRefresh
+        android:id="@+id/msg_sys_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarSize="@dimen/scrollbarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+        android:scrollbars="vertical"
+        android:visibility="gone" />
+
+</com.zhy.android.percent.support.PercentFrameLayout>

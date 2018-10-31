@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="scrollbarSize">6sp</dimen>
+    <!-- AutoLayout -->
+    <dimen name="dialog_title_size_45">45px</dimen>
+    <dimen name="dialog_title_maginleft_82">82px</dimen>
+    <dimen name="dialog_send_voice_time">36px</dimen>
+    <!-- AutoLayout -->
+    <dimen name="dialog_cancel_img_50">46px</dimen>
+    <dimen name="dialog_cancel_img_55">55px</dimen>
+    <!-- 有阴影的弹窗 -->
+    <dimen name="default_corner_radius">4dp</dimen>
+    <dimen name="default_shadow_radius">4dp</dimen>
+
+</resources>

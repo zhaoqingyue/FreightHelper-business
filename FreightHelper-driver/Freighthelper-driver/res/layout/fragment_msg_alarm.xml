@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windows_color"
+    android:orientation="vertical" >
+
+    <!-- 暂无消息 -->
+
+    <TextView
+        android:id="@+id/msg_alarm_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_textSizePercent="@string/textsize_50px"
+        android:gravity="center"
+        android:text="@string/msg_no_msg"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <!-- 加载失败 -->
+
+    <include
+        android:id="@+id/msg_alarm_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_failed"
+        android:visibility="gone" />
+
+    <!-- 网络异常 -->
+
+    <include
+        android:id="@+id/msg_alarm_net_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_net_abnormal"
+        android:visibility="gone" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/msg_alarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/msg_alarm_select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10.5%sh"
+            app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+            app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <!-- 车况 -->
+
+            <TextView
+                android:id="@+id/msg_alarm_car"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_heightPercent="60%h"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:background="@drawable/selector_mark_filter_bg"
+                android:gravity="center"
+                android:text="@string/msg_alarm_car"
+                android:textColor="@drawable/selector_mark_filter_text" />
+
+            <!-- 设备 -->
+
+            <TextView
+                android:id="@+id/msg_alarm_device"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_heightPercent="60%h"
+                app:layout_marginLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:background="@drawable/selector_mark_filter_bg"
+                android:gravity="center"
+                android:text="@string/msg_alarm_device"
+                android:textColor="@drawable/selector_mark_filter_text" />
+
+            <!-- 驾驶行为 -->
+
+            <TextView
+                android:id="@+id/msg_alarm_behavior"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_heightPercent="60%h"
+                app:layout_marginLeftPercent="@string/common_paddingLeftPercent"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:background="@drawable/selector_mark_filter_bg"
+                android:gravity="center"
+                android:text="@string/msg_alarm_behavior"
+                android:textColor="@drawable/selector_mark_filter_text" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.mtq.bus.freighthelper.ui.customview.ListViewForRefresh
+            android:id="@+id/msg_alarm_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarSize="@dimen/scrollbarSize"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbars="vertical" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+    
+    <!-- 正在加载 -->
+
+    <include
+        android:id="@+id/msg_alarm_laoding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading"
+        android:visibility="visible" />
+
+</com.zhy.android.percent.support.PercentFrameLayout>

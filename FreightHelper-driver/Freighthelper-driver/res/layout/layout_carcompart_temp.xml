@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/carcompart_temperature_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        app:layout_heightPercent="40%h"
+        app:layout_widthPercent="40%h"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/car_state_temperature" />
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_marginLeftPercent="3.5%sw"
+        android:gravity="center_vertical" >
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:id="@+id/carcompart_temperature_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/carcompart_temperature_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="@string/textsize_38px"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/text_normal_color" />
+
+            <TextView
+                android:id="@+id/carcompart_temperature_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="1.8%sw"
+                app:layout_textSizePercent="@string/textsize_48px"
+                android:text="0℃"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            
+            <TextView
+                android:id="@+id/carcompart_temperature_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="@string/textsize_36px"
+                android:text="(高)"
+                android:textColor="@color/red"
+                android:visibility="invisible" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+
+        <com.mtq.bus.freighthelper.ui.customview.SpringProgressView
+            android:id="@+id/carcompart_temperature_sp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/carcompart_temperature_layout"
+            app:layout_heightPercent="0.5%sh"
+            app:layout_widthPercent="23.9%sw" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

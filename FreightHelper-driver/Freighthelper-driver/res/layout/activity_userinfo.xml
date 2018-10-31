@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bar_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="@string/layout_title_height"
+        layout="@layout/layout_title" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windows_color"
+        android:orientation="vertical" >
+
+        <!-- 用户名 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/userinfo_username"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_content=""
+            app:vc_hasarrow="false"
+            app:vc_hascontent="true"
+            app:vc_title="@string/userinfo_username" />
+
+        <!-- 所属机构 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/userinfo_org_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_content=""
+            app:vc_hasarrow="false"
+            app:vc_hascontent="true"
+            app:vc_title="@string/userinfo_org_name" />
+
+        <!-- 姓名 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/userinfo_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_content=""
+            app:vc_hasarrow="false"
+            app:vc_hascontent="true"
+            app:vc_title="@string/userinfo_name" />
+
+        <!-- 修改密码 -->
+
+        <com.mtq.bus.freighthelper.ui.customview.VerticalCard
+            android:id="@+id/userinfo_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="@string/common_vc_heightPercent"
+            app:vc_hasline="false"
+            app:vc_title="@string/userinfo_pwd" />
+
+        <!-- 退出登录 -->
+
+        <Button
+            android:id="@+id/userinfo_logout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_heightPercent="@string/common_btn_heightPercent"
+            app:layout_marginTopPercent="@string/common_marginTopPercent"
+            app:layout_textSizePercent="@string/textsize_50px"
+            android:background="@drawable/selector_bth_white_bg"
+            android:text="@string/userinfo_logout"
+            android:textColor="@color/red" />
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

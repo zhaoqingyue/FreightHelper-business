@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+        app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            app:layout_textSizePercent="4.5%w"
+            android:text="粤B88888"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:layout_textSizePercent="4.5%w"
+            android:text="自有车辆"
+            android:textColor="@color/black" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_marginLeftPercent="@string/line_marginLeftPercent"
+        app:layout_marginRightPercent="@string/line_marginRightPercent"
+        android:background="@color/windows_color" />
+    
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+        app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            app:layout_textSizePercent="4.5%w"
+            android:text="赵庆月"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:layout_textSizePercent="4.5%w"
+            android:text="13421812821"
+            android:textColor="@color/black" />
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>

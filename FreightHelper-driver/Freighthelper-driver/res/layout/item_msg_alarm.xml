@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="12.0%sh"
+        app:layout_paddingLeftPercent="@string/common_paddingLeftPercent"
+        app:layout_paddingRightPercent="@string/common_paddingRightPercent"
+        android:background="@drawable/selector_list_item_bg"
+        android:orientation="horizontal" >
+
+        <com.zhy.android.percent.support.PercentRelativeLayout
+            android:id="@+id/item_msg_sys_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical" >
+
+            <!-- <TextView
+                android:id="@+id/item_msg_alarm_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:text=""
+                android:textColor="@color/text_highlight_color" /> -->
+            
+            <com.mtq.bus.freighthelper.ui.customview.RedDotTextView
+                android:id="@+id/item_msg_alarm_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_textSizePercent="@string/textsize_46px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:text=""
+                app:redDotVisibility="visible"
+                android:textColor="@color/text_highlight_color" />
+
+            <TextView
+                android:id="@+id/item_msg_alarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/item_msg_alarm_license"
+                android:layout_below="@+id/item_msg_alarm_license"
+                app:layout_textSizePercent="@string/textsize_42px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_normal_color" />
+
+            <!-- <ImageView
+                android:id="@+id/item_msg_alarm_status"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/item_msg_alarm_license"
+                app:layout_heightPercent="3.0%sw"
+                app:layout_widthPercent="3.0%sw"
+                android:background="@drawable/shape_dot_highlight"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible" /> -->
+        </com.zhy.android.percent.support.PercentRelativeLayout>
+
+        <com.zhy.android.percent.support.PercentLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/item_msg_sys_left"
+            android:layout_weight="1"
+            app:layout_marginLeftPercent="2%sw"
+            android:gravity="right|center_vertical" >
+
+            <TextView
+                android:id="@+id/item_msg_alarm_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_textSizePercent="@string/textsize_44px"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF7900"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/item_msg_alarm_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%h"
+                app:layout_paddingTopPercent="40%h"
+                app:layout_paddingBottomPercent="40%h"
+                app:layout_marginLeftPercent="3%sw"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_right"
+                android:visibility="visible" />
+        </com.zhy.android.percent.support.PercentLinearLayout>
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>
